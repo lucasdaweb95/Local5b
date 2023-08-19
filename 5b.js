@@ -2153,13 +2153,13 @@ async function loadingScreen() {
 	ctx.font = '30px Helvetica';
 	ctx.fillText('Loading...', cwidth / 2, cheight / 2);
 
-	let req = await fetch('data/levels.txt');
+	let req = await fetch("https://coppersalts.github.io/HTML5b/data/levels.txt");
 	let text = await req.text();
 	defaultLevelsString = text;
 	levelsString = defaultLevelsString;
 	loadLevels();
 
-	req = await fetch('data/images2.json');
+	req = await fetch("https://coppersalts.github.io/HTML5b/data/images2.json");
 	let resourceData = await req.text();
 	resourceData = JSON.parse(resourceData);
 
